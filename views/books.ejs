@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <ul>
+      <% if(books.length !== 0) { %>
+      <% books.forEach((book) => { %>
+        <li>
+          <p>Book Id: <%= book.bookId  %></p>
+          <p>Name: <%= book.name  %></p>
+          <% if(book.isAvailable) { %>
+            <p>available</p>
+          <% } else { %>
+            <p>Out of Stock</p>
+          <% } %>
+        </li>
+      <% }) %>
+      <% } %>
+    </ul>
+  </div>
+</body>
+</html>
